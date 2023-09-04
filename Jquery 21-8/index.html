@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" id="new">
+    <div id="one">
+        <p>this is my first jquery tutorial</p>
+    </div>
+
+    <div id="box" class="two">
+        <p>this is a second box</p>
+        <p>We have A mor than javascript tutorial And lod of courses but if he Good after Noon man</p>
+    </div>
+    <button id="done">Don</button>
+    <button id="css">css</button>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+           $('.two').css("border","solid 2px red");
+           $(".two").click(function(){
+            $("p:eq(1)").css('color','green');
+           });
+
+           $(".two").dblclick(function(){
+            $("p:eq(2)").css('color','orange');
+           });
+
+           $(".two").mouseenter(function(){
+            $("p:eq(1)").css('background-color','blue');
+           });
+
+           $('body').keydown(function(){
+             $(this).css("background-color",'green');
+           });
+
+           $('#new').focus(function(){
+            $(this).css('background-color','orange');
+           });
+
+           $('#new').blur(function(){
+            $(this).css('background-color','');
+           });
+           var a = $('#box').attr('class');
+           console.log(a);
+           $('#done').click(function(){
+            $("#one p").text("i have been changed by jquery")
+           });
+           $("#css").click(function(){
+            $("#one").css({"background":"red","border":"2px solid black","margin":"50px"});
+           });
+        });
+
+    </script>
+</body>
+</html>

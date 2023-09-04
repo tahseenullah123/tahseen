@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <script>
+        function calc()
+        {
+            var text1 = parseInt(document.getElementById("text1").value);
+            var text2 = parseInt(document.getElementById("text2").value);
+            var oper = document.getElementById("operators").value;
+
+            if(oper === "+")
+            {
+                document.getElementById("result").value = text1+text2;
+            }
+
+            if(oper === "-")
+            {
+                document.getElementById("result").value = text1-text2;
+            }
+
+            if(oper === "/")
+            {
+                document.getElementById("result").value = text1/text2;
+            }
+
+            if(oper === "x")
+            {
+                document.getElementById("result").value = text1*text2;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="calcu">
+        <div class="text">
+    <input class="pad textt" type="text" id="text1"><br><br>
+    <input class="pad textt" type="text" id="text2"><br><br>
+    </div>
+    <select class="sel" id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">%</option>
+        <option value="x">x</option>
+    </select><br><br>
+    <button class="btn" onclick="calc();">=</button><br><br>
+    <input class="result" type="text" id="result">
+    
+    </div>
+</body>
+</html>

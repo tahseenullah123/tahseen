@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="marr">JAMIA BINORIA KARACHI</h1>
+    <div id="box">
+        <h2>what is jQuery On & Off Method</h2>
+        <p>in on method we can add more than css just one function and off for Remove this method</p>
+        <p>mouseover, mouseout and click will be axplain </p>
+        <h1>Tahseen Ullah</h1>
+        <P>I,m student of jamia binoria KARACHI</P>
+    </div>
+
+    <button id="btn1" class="marr">Remove css</button>
+
+    <!-- append & prepend -->
+
+    <div id="appe">
+        <h2 class="marr">What is jQuery Append & Prepend Method</h2>
+        <p>click on button and seeeees</p>
+        <ol>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ol>
+    </div>
+
+    <button id="app1" class="marr">append</button>
+    <button id="pre1" class="marr">prepend</button><br><br>
+
+    
+
+    <!-- jQuery After & Before Method -->
+       
+    <h2 class="marr">jQuery After & Before Method</h2>
+
+    <div id="box2">
+        <h1>this is jQuery After & Before Method </h1>
+        <p>how it ia working let's go try it practically</p>
+        <br><br>
+        <button id="after">After</button>
+        <button id="before">Before</button>
+    </div>
+
+    <!-- jQuery Empty & Remove Method -->
+
+    <h2 class="marr">jQuery Empty & Remove Method</h2>
+
+    <div id="box3">
+        <h2>jQuery Empty & Remove Method</h2>
+        <br><br>
+        <p>this all text will be remove on click button</p>
+    </div>
+    <button id="emp" class="marr">Empty</button>
+    <button id="empp" class="marr">Empty paragraph</button>
+    <button id="remo" class="marr">Remove</button>
+    <br><br>
+
+    <!-- jQuery AppendTo & PrependTo Method -->
+    <h2 class="marr">jQuery AppendTo & PrependTo Method</h2>
+    <div id="box4">
+        <h2>jQuery AppendTo & PrependTo Method</h2>
+        <p>this a paragraph one</p>
+        <p>this a paragraph two</p>
+        <p>this a paragraph three</p>
+    </div>
+
+    <button id="to1" class="marr">appendTo</button>
+    <button id="to2" class="marr">prependTo</button>
+
+    <br><br>
+
+    <!-- jQuery Clone Method Tutorial -->
+
+    <h2 class="marr">jQuery Clone Method Tutorial</h2>
+    <div id="box5">
+        <h2>this is box one</h2>
+        <p>i,m a paragraph see more</p>
+    </div>
+
+    <div id="box6">
+        <h2>this is box two</h2>
+        <p>hi <br> this a paragraph sseeee</p>
+    </div>
+    <button id="clon" class="marr">Clone</button>
+
+    <!-- jQuery ReplaceWith & ReplaceAll Method -->
+
+    <h2 class="marr">jQuery ReplaceWith & ReplaceAll Method</h2>
+    <div id="box7">
+        <p>paragraph one</p>
+        <p>paragraph two</p>
+        <p>paragraph three</p>
+    </div>
+    <button id="repw" class="marr">ReplaceWith</button>
+    <button id="repa" class="marr">Replaceall</button>
+
+    <!-- jQuery Wrap & UnWrap Method -->
+
+    <h2 class="marr">jQuery Wrap & UnWrap Method</h2>
+
+    <div id="box8">
+        <h2>this a box</h2>
+        <p>this is a paragraph</p>
+    </div>
+
+    <button class="marr" id="wr">wrap</button>
+    <button class="marr" id="uw">unwrap</button>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#box').on({
+                "click" : function(){
+                    $(this).css("background","red");
+                },
+                "mouseover" : function(){
+                    $(this).css("background","orange");
+                },
+                "mouseout" : function(){
+                    $(this).css("background","blue");
+                }
+            });
+            
+            $("#btn1").click(function(){
+                $("#box").off("mouseover mouseout")
+            });
+        });
+
+
+        // append & prepend
+
+        $(document).ready(function(){
+            $("#app1").click(function(){
+                $('ol').append("<li>List item append</li>");
+            });
+
+            $("#pre1").click(function(){
+                $('ol').prepend("<li>List item prepend</li>");
+            });
+        });
+
+        // jQuery After & Before Method
+        $(document).ready(function(){
+            $("#after").click(function(){
+                $('#box2').after('<h2>This is after method</h2>');
+            });
+
+            $("#before").click(function(){
+                $('#box2').before('<h2>This is before method</h2><p>second tag also allowd</P>');
+            });
+        });
+
+        // jQuery Empty & Remove Method
+
+        $(document).ready(function(){
+            $("#emp").click(function(){
+                $("#box3").empty();
+            });
+
+            $("#empp").click(function(){
+                $("#box3 p").empty();
+            });
+
+            $("#remo").click(function(){
+                $("#box3").remove();
+            });
+        });
+
+        // jQuery AppendTo & PrependTo Method
+        $(document).ready(function(){
+            $("#to1").click(function(){
+                $("<p>this is added by appendto</p>").appendTo("#box4");
+            });
+
+            $("#to2").click(function(){
+                $("<p>this is added by prependto</p>").prependTo("#box4");
+            });
+        });
+
+        // jQuery Clone Method Tutorial
+        $(document).ready(function(){
+            $("#clon").click(function(){
+                $("#box5 h2").clone().prependTo('#box6');
+            });
+        });
+
+        // jQuery ReplaceWith & ReplaceAll Method
+
+        $(document).ready(function(){
+            $("#repw").click(function(){
+                $('#box7 p:first-child').replaceWith('<h2>Replace with optin</h2>');
+            });
+            $("#repa").click(function(){
+                $('<h2>Replace all optin</h2>').replaceAll('#box7 p:last-child');
+            });
+        });
+
+        // jQuery Wrap & UnWrap Method
+
+        $(document).ready(function(){
+            $('#wr').click(function(){
+                $("#box8 p").wrap("<b></b>");
+            });
+
+            $('#uw').click(function(){
+                $('#box8 p').unwrap();
+            });
+        });
+
+
+    </script>
+</body>
+</html>

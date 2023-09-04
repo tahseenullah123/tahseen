@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = 0;
+        var images = [];
+        var time = 3000;
+
+        images[0] = 'pic1.jpg';
+        images[1] = 'pic2.jpg';
+        images[2] = 'pic3.jpg';
+        images[3] = 'pic4.jpg';
+
+
+        function changeImg(){
+            document.slide.src = images[i];
+            if(i < images.length - 1){
+                i++;
+            } else {
+                i = 0;
+            }
+            setTimeout("changeImg()", time);
+        }
+    </script>
+    <img name="slide" width="400px" height="200px">
+</body>
+</html>

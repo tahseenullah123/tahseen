@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Gallery</title>
+</head>
+<body>
+    <img src="pic/rr.jpg" width="700px" height="600" id="mainimage">
+    <script type="text/javascript">
+        var myImage = document.getElementById("mainimage");
+        var imageArry = ["pic/rr.jpg", "pic/tt.jpg", "pic/tahseen.jpg", "pic/fff.jpg", "pic/ggg.jpg","pic/Amazing Nature.jpg", "pic/sea_planet_hd.jpg"];
+        var imageIndex = 1;
+
+        function changeImage(){
+            myImage.setAttribute("src", imageArry[imageIndex]);
+            imageIndex++;
+            if (imageIndex > 6 ) {imageIndex = 0;}
+        }
+    </script>
+    <button onclick="changeImage()">Next</button>
+</body>
+</html>
