@@ -1,0 +1,32 @@
+git diff                         show changing
+
+
+git diff -- staged                work compair with last commit
+
+git checkout -f                   agar ghalti sy kuch chang hojay to last commit sy match karny kely
+
+git commit -a -m "msg"            add and commit in one command
+
+toch file name                     for create file
+
+git rm file name                   remove file frome staging area and hard disk
+
+git rm --cached file name          remove file just staging area
+
+git log -p -1                      show just last one commit
+
+
+git status -s                     show status with m for show commit and add
+
+git branch branch name            for crea new branch
+
+
+git checkout branch name         for chang branch
+
+git marge branch name            branch marge to main branch
+
+
+git branch branch name -b        for creat branch and enter that branch
+
+
+for add local files creat repo in github then copy link of repo and (1)past in command (2)then git push origin master
